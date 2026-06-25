@@ -8,20 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  /* ===========================================
-     デザイントークン
-     色: 空とコートをイメージした青系 + 出会いの温かさを示すコーラル差し色
-     =========================================== */
   :root{
-    --sky-deep:   #0A4F9E; /* 濃い青：見出し・フッター・グラデーション上部 */
-    --sky-main:   #1E8FE0; /* メインの鮮やかな水色青：CTA・アクセント */
-    --sky-vivid:  #3FB6F0; /* 明るい水色：グラデーション下部・ハイライト */
-    --sky-light:  #E3F4FD; /* 淡い水色：セクション背景 */
-    --sky-pale:   #F4FAFE; /* ページ全体の下地 */
-    --coral:      #FF8961; /* 差し色（最小限の使用：ボール・強調1点のみ） */
-    --ink:        #14283D; /* 本文色 */
-    --muted:      #4D7396; /* 補足テキスト */
-    --line:       #CBE6F7; /* 区切り線・枠線 */
+    --sky-deep:   #0A4F9E;
+    --sky-main:   #1E8FE0; 
+    --sky-vivid:  #3FB6F0; 
+    --sky-light:  #E3F4FD; 
+    --sky-pale:   #F4FAFE; 
+    --coral:      #FF8961; 
+    --ink:        #14283D; 
+    --muted:      #4D7396; 
+    --line:       #CBE6F7; 
     --white:      #FFFFFF;
 
     --font-display: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif;
@@ -89,9 +85,7 @@
     flex-shrink: 0;
   }
 
-  /* ===========================================
-     ヘッダー
-     =========================================== */
+ 
   header{
     position: sticky;
     top: 0;
@@ -142,9 +136,6 @@
     nav.site-nav{ display: none; }
   }
 
-  /* ===========================================
-     ヒーロー：空とコートラインのモチーフ
-     =========================================== */
   .hero{
     position: relative;
     overflow: hidden;
@@ -240,9 +231,6 @@
   }
   .btn-secondary:hover{ border-color: var(--sky-main); color: var(--sky-main); }
 
-  /* ===========================================
-     概要セクション
-     =========================================== */
   .section-head{
     text-align: center;
     max-width: 620px;
@@ -302,9 +290,6 @@
   }
   .concept-words .x{ color: #FFE3A3; font-size: 18px; }
 
-  /* ===========================================
-     見どころ（3カード）
-     =========================================== */
   .highlight-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -334,9 +319,6 @@
   .highlight-card h3{ font-size: 17px; font-weight: 700; margin-bottom: 10px; }
   .highlight-card p{ font-size: 14.5px; color: var(--muted); margin: 0; }
 
-  /* ===========================================
-     準備中プレースホルダー（スケジュール/持ち物等）
-     =========================================== */
   .pending-card{
     border: 1.5px dashed #B9D9F2;
     background: var(--sky-light);
@@ -377,9 +359,6 @@
   .info-row .val{ font-size: 14.5px; color: var(--ink); }
   .info-row .val.tbd{ color: var(--coral); font-weight: 600; }
 
-  /* ===========================================
-     会場
-     =========================================== */
   .venue-wrap{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -414,9 +393,6 @@
   .venue-detail li{ font-size: 14.5px; color: var(--muted); }
   .venue-detail li b{ color: var(--ink); font-weight: 700; }
 
-  /* ===========================================
-     FAQ
-     =========================================== */
   .faq-item{
     border-bottom: 1px solid var(--line);
     padding: 22px 0;
@@ -427,9 +403,6 @@
   .faq-a{ display: flex; gap: 12px; margin-top: 10px; color: var(--muted); font-size: 14.5px; }
   .faq-a::before{ content: 'A'; color: var(--sky-main); font-family: var(--font-display); font-weight: 700; flex-shrink: 0; }
 
-  /* ===========================================
-     お問い合わせ
-     =========================================== */
   .contact-block{
     background: linear-gradient(135deg, var(--sky-deep), var(--sky-vivid));
     border-radius: 24px;
@@ -452,9 +425,6 @@
   }
   .contact-email a{ text-decoration: underline; color: var(--white); }
 
-  /* ===========================================
-     フッター
-     =========================================== */
   footer{
     background: var(--sky-deep);
     color: #9FC0DA;
@@ -470,7 +440,6 @@
   }
   footer .footer-note{ margin-top: 18px; color: #6E91AD; line-height: 1.7; }
 
-  /* スクロールリビール */
   .reveal{
     opacity: 0;
     transform: translateY(16px);
@@ -481,13 +450,9 @@
 </head>
 <body>
 
-<!-- ===========================================
-     ヘッダー
-     =========================================== -->
 <header>
   <div class="header-inner">
     <div class="logo"><span>イベント</span>（仮）</div>
-    <!-- TODO: イベント名確定後にロゴ文言を差し替え -->
     <nav class="site-nav">
       <a href="#about">概要</a>
       <a href="#highlights">見どころ</a>
@@ -499,13 +464,10 @@
   </div>
 </header>
 
-<!-- ===========================================
-     ヒーロー
-     =========================================== -->
+
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
     <svg width="100%" height="100%" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" style="position:absolute; inset:0;">
-      <!-- 空に浮かぶ雲 -->
       <g opacity="0.35" fill="#FFFFFF">
         <ellipse cx="150" cy="90" rx="70" ry="26"/>
         <ellipse cx="210" cy="80" rx="50" ry="22"/>
@@ -513,7 +475,6 @@
         <ellipse cx="980" cy="75" rx="50" ry="20"/>
         <ellipse cx="600" cy="40" rx="60" ry="20"/>
       </g>
-      <!-- フットサルコートのライン（中央サークル＋ゴールエリア） -->
       <g stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.22">
         <circle cx="600" cy="430" r="90"/>
         <line x1="600" y1="340" x2="600" y2="520"/>
@@ -526,19 +487,16 @@
   <div class="container hero-content">
     <span class="eyebrow">出会い × スポーツ</span>
     <h1>イベント<span class="accent">（仮）</span></h1>
-    <!-- TODO: イベント名確定後に差し替え -->
     <p class="lead">フットサルで体を動かしながら、新しい出会いを。<br>経験不問・初心者歓迎の交流型スポーツイベントです。</p>
 
     <div class="hero-meta">
       <div class="meta-chip">
         <span class="label">開催日時</span>
         <span class="value pending">2026年10月（日程調整中）</span>
-        <!-- TODO: 具体的な日付・時間を確定後に記載 -->
       </div>
       <div class="meta-chip">
         <span class="label">開催地</span>
         <span class="value pending">しんよこフットボールパーク</span>
-        <!-- TODO: 正式な会場名・住所を確定後に記載 -->
       </div>
       <div class="meta-chip">
         <span class="label">種目</span>
@@ -556,10 +514,7 @@
     </div>
   </div>
 </section>
-
-<!-- ===========================================
-     概要
-     =========================================== -->
+  
 <section id="about">
   <div class="container">
     <div class="section-head reveal">
@@ -600,9 +555,6 @@
   </div>
 </section>
 
-<!-- ===========================================
-     見どころ
-     =========================================== -->
 <section id="highlights" style="background: var(--sky-light);">
   <div class="container">
     <div class="section-head reveal">
@@ -636,9 +588,6 @@
   </div>
 </section>
 
-<!-- ===========================================
-     スケジュール（未確定のため準備中表示）
-     =========================================== -->
 <section id="schedule">
   <div class="container">
     <div class="section-head reveal">
@@ -651,14 +600,10 @@
       </div>
       <strong>スケジュールは現在調整中です</strong>
       <span>確定次第、このページで公開します。</span>
-      <!-- TODO: 受付・オリエンテーション・試合・交流会等のタイムテーブルを確定後に記載 -->
     </div>
   </div>
 </section>
 
-<!-- ===========================================
-     参加にあたって（持ち物・注意事項・参加方法）
-     =========================================== -->
 <section style="background: var(--sky-light);">
   <div class="container">
     <div class="section-head reveal">
@@ -670,12 +615,10 @@
       <div class="info-row">
         <div class="key">持ち物</div>
         <div class="val tbd">準備中（確定後に記載します）</div>
-        <!-- TODO: 運動着・室内シューズ等の持ち物リストを記載 -->
       </div>
       <div class="info-row">
         <div class="key">注意事項</div>
         <div class="val tbd">準備中（確定後に記載します）</div>
-        <!-- TODO: 雨天対応・キャンセルポリシー等を記載 -->
       </div>
       <div class="info-row">
         <div class="key">参加方法</div>
@@ -684,20 +627,15 @@
       <div class="info-row">
         <div class="key">参加費</div>
         <div class="val tbd">1000円</div>
-        <!-- TODO: 参加費の有無・金額を記載 -->
       </div>
       <div class="info-row">
         <div class="key">募集人数</div>
         <div class="val tbd">最大30名<p>(審判のボランティア3名)</p></div>
-        <!-- TODO: 定員・申込締切を記載 -->
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===========================================
-     会場・アクセス
-     =========================================== -->
 <section id="venue">
   <div class="container">
     <div class="section-head reveal">
@@ -707,7 +645,6 @@
     <div class="venue-wrap reveal">
       <div class="venue-map-placeholder">
         地図埋め込み
-        <!-- TODO: 会場確定後、Google Maps の埋め込みに差し替え -->
       </div>
       <div class="venue-detail">
         <h3>しんよこフットボールパーク</h3>
@@ -721,9 +658,6 @@
   </div>
 </section>
 
-<!-- ===========================================
-     FAQ
-     =========================================== -->
 <section id="faq" style="background: var(--sky-light);">
   <div class="container" style="max-width: 760px;">
     <div class="section-head reveal">
@@ -739,14 +673,10 @@
         <div class="faq-q">参加できる年齢・対象者は決まっていますか？</div>
         <div class="faq-a">18〜22歳の大学生・専門学校生を対象としています。</div>
       </div>
-      <!-- TODO: 参加費・持ち物・定員などが確定したら、対応するFAQを追加 -->
     </div>
   </div>
 </section>
 
-<!-- ===========================================
-     お問い合わせ
-     =========================================== -->
 <section id="contact">
   <div class="container">
     <div class="contact-block reveal">
@@ -754,26 +684,22 @@
       <p>申し込み・ご質問は、以下のフォームまたはメールにて承っています。</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdmrG_TgIMqyFFF-bMhy7jVR-snHAFX2R679jrS6A9MdSbpPA/viewform?usp=header" target="_blank" rel="noopener">Googleフォームで申し込む</a>
-        <!-- TODO: Googleフォームの実際のURLに差し替え -->
+      
         <a class="btn btn-secondary" href="mailto:revleat.event@gmail.com">メールで問い合わせる</a>
-        <!-- TODO: 実際の問い合わせ用メールアドレスに差し替え -->
+        
       </div>
       <div class="contact-email">
         メール：<a href="mailto:revleat.event@gmail.com">revleat.event@gmail.com</a>
-        <!-- TODO: 実際のメールアドレスに差し替え -->
+       
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===========================================
-     フッター
-     =========================================== -->
 <footer>
   <div class="container footer-inner">
     <div>イベント名（仮） / 出会い×スポーツ フットサルイベント</div>
     <div>&copy; 2026 主催者名（仮）</div>
-    <!-- TODO: 主催者名（個人・団体・企業名）を確定後に記載 -->
   </div>
   <div class="container footer-note">
     本ページは草案2です。日程・会場・参加費・持ち物等の情報は確定後に更新されます。
@@ -781,7 +707,6 @@
 </footer>
 
 <script>
-  // スクロールで要素をフェードイン表示（reduced-motion環境では即時表示）
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('.reveal');
 
